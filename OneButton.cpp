@@ -5,7 +5,7 @@ OneButton::OneButton(int pin, PinMode inputType) //Pass INPUT_PULLUP for connect
   pinMode(pin, inputType);      // sets the MenuPin as input
   _pin = pin;
 
-  _clickTicks = 600;        // number of millisec that have to pass by before a click is detected.
+  _clickTicks = 400;        // number of millisec that have to pass by before a click is detected.
   _pressTicks = 1000;       // number of millisec that have to pass by before a lonn button press is detected.
 
   _state = 0; // starting with state 0: waiting for button to be pressed

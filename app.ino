@@ -4,7 +4,7 @@
 SYSTEM_MODE(SEMI_AUTOMATIC);
 
 // This #include statement was automatically added by the Spark IDE.
-#include "OneButton.h"
+//#include "OneButton.h"
 #include "DynamicCommandParser.h"
 #include "HX711.h"
 /*
@@ -68,7 +68,7 @@ DynamicCommandParser commandParser('^','$',',');
 
 // Network connectivity
 TCPClient client;
-byte server[] = { 10,0,0,100 };
+byte server[] = { 10,0,0,40 };
 int port = 9998;
 
 
@@ -81,7 +81,7 @@ void setup() {
     pinMode(BLIND_1_PIN_1,OUTPUT);
 
     commandParser.addParser("heartbeat",centralHeartbeat);
-    commandParser.addParser("reset",reset);
+    commandParser.addParser("reset",resetDevice);
     commandParser.addParser("connect-to-cloud",connectToCloud);
     commandParser.addParser("control-blinds",controlBlinds);
 
@@ -278,7 +278,7 @@ void checkMotorStopTime(){
 
 
 
-void reset(char **values, int valueCount){
+void resetDevice(char **values, int valueCount){
   System.reset();
 }
 
