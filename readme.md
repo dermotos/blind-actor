@@ -15,13 +15,13 @@ Schematic
 -------------
 
 
-![Schematic](https://raw.githubusercontent.com/dermotos/blind-actor/master/hardware%20schematic/schematic.png)
+![Schematic](https://raw.githubusercontent.com/dermotos/blind-actor/master/Hardware%20Schematic/schematic.png)
 
 A custom made blind controller running on a [Particle Photon](https://particle.io) microcontroller.
 
 Allows control of two sets of blind motors, and weight sensing (bed occupancy sensor).
 
-[Fritzing](http://github.com/dermotos/blind-actor/hardware%20schematic/schematic.fzz)
+[Fritzing](http://github.com/dermotos/blind-actor/Hardware%20Schematic/schematic.fzz)
 
 This device is designed to connect to a central controller. Checkout the [Central Control Repo](http://github.com/dermotos/central)
 
