@@ -51,7 +51,7 @@ unsigned long motorStopTime[] = {0,0};  // Used to schedule a time in the near f
 
 
 //Used by heartbeat()
-unsigned long deviceHeartbeatInterval = 1000 * 10; //Checkin with central control every 10 seconds
+unsigned long deviceHeartbeatInterval = 25 * 1000; //Checkin with central control every 25 seconds
 unsigned long nextDeviceHeartbeat = 0;
 
 unsigned long centralHeartbeatInterval = 60 * 1000; //Expect a heartbeat from central control every 60 seconds (usually less).
@@ -379,6 +379,6 @@ void loop() {
     checkMotorStopTime();
     heartbeat();
     receiveData();
-    sendScaleReadings();
+    //sendScaleReadings();
     delay(5);
 }
